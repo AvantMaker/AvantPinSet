@@ -1,5 +1,7 @@
 # AvantPinSet
 
+**README Version 1.0.1** • **Revised: September 22, 2025** • **Author: AvantMaker** • **https://www.AvantMaker.com**
+
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform](https://img.shields.io/badge/Platform-ESP32-blue.svg)](https://www.espressif.com/en/products/socs/esp32)
 [![Language](https://img.shields.io/badge/Language-Arduino-teal.svg)](https://www.arduino.cc/)
