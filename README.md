@@ -251,7 +251,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## Connect With Us
 
 - [AvantMaker.com](https://www.avantmaker.com)
-- [GitHub Repository](https://github.com/YourUsername/AvantPinSet)
+- [GitHub Repository](https://github.com/AvantMaker)
 
 ---
 
