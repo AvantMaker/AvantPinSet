@@ -113,6 +113,11 @@ void AvantPinSet::digitalSet(int pinNum, int state) {
   pin->isTimerActive = false;
   pin->callback = nullptr;
 
+  // If switching from PWM mode to digital mode, reconfigure the pin
+  if (pin->currentMode == "pwm" || pin->currentMode == "fading") {
+    pinMode(pin->pinNumber, OUTPUT);
+  }
+
   pin->currentMode = "digital";
   pin->currentValue = (state == HIGH) ? HIGH : LOW;
   digitalWrite(pin->pinNumber, pin->currentValue);
@@ -121,6 +126,11 @@ void AvantPinSet::digitalSet(int pinNum, int state) {
 void AvantPinSet::digitalSetTime(int pinNum, int state, unsigned long delaySeconds, TimedActionCallback callback) {
   PinData* pin = findPinData(pinNum);
   if (!pin) return;
+
+  // If switching from PWM mode to digital mode, reconfigure the pin
+  if (pin->currentMode == "pwm" || pin->currentMode == "fading") {
+    pinMode(pin->pinNumber, OUTPUT);
+  }
 
   // 1. Set the pin to the target state immediately
   pin->currentMode = "digital";
